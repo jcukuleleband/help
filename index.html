@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="Touch-friendly communication helper with voice output for limited communication users." />
+  <meta name="theme-color" content="#085c9b" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Comm Helper" />
+  <meta name="format-detection" content="telephone=no" />
+  <title>Communication Helper</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" sizes="180x180" href="icons/icon-180.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="icons/icon-512.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <h1>Communication Helper</h1>
+    <p class="instructions">Tap an icon to say the word aloud. Designed for easy finger use.</p>
+    <div class="page-actions">
+      <a class="secondary-link" href="sentences.html">Sentence Builder</a>
+    </div>
+
+    <div class="button-grid" role="group" aria-label="Communication actions">
+      <button class="comm-button" data-word="Yes" aria-label="Yes">
+        <span class="icon">👍</span>
+        <span class="label">Yes</span>
+      </button>
+      <button class="comm-button" data-word="No" aria-label="No">
+        <span class="icon">👎</span>
+        <span class="label">No</span>
+      </button>
+      <button class="comm-button" data-word="Pain" aria-label="Pain">
+        <span class="icon">😣</span>
+        <span class="label">Pain</span>
+      </button>
+      <button class="comm-button" data-word="Nurse" aria-label="Nurse">
+        <span class="icon">👩‍⚕️</span>
+        <span class="label">Nurse</span>
+      </button>
+      <button class="comm-button" data-word="Adjust Bed" aria-label="Adjust Bed">
+        <span class="icon">🛏️</span>
+        <span class="label">Adjust Bed</span>
+      </button>
+      <button class="comm-button" data-word="Adjust Pillow" aria-label="Adjust Pillow">
+        <span class="icon">🛌</span>
+        <span class="label">Adjust Pillow</span>
+      </button>
+      <button class="comm-button" data-word="Worried" aria-label="Worried">
+        <span class="icon">😟</span>
+        <span class="label">Worried</span>
+      </button>
+      <button class="comm-button" data-word="Not Sure" aria-label="Not Sure">
+        <span class="icon">❓</span>
+        <span class="label">Not Sure</span>
+      </button>
+      <button class="comm-button" data-word="Potty" aria-label="Potty">
+        <span class="icon">🚽</span>
+        <span class="label">Potty</span>
+      </button>
+      <button class="comm-button" data-word="Your crazy" aria-label="Your crazy">
+        <span class="icon">🤪</span>
+        <span class="label">Your Crazy</span>
+      </button>
+      <button class="comm-button" data-word="I don't understand" aria-label="I don't understand">
+        <span class="icon">🤷</span>
+        <span class="label">Don't Understand</span>
+      </button>
+      <button class="comm-button" data-word="Choking" aria-label="Choking">
+        <span class="icon">⚠️</span>
+        <span class="label">Choking</span>
+      </button>
+    </div>
+
+    <div class="feedback" aria-live="polite" id="feedback">Ready to communicate.</div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

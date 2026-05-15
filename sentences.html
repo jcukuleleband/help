@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="Sentence builder page for the communication helper app." />
+  <title>Sentence Builder</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <div class="page-header">
+      <a class="nav-link" href="index.html">← Home</a>
+      <h1>Sentence Builder</h1>
+    </div>
+
+    <p class="instructions">Tap common words to build a sentence, then speak it aloud.</p>
+
+    <div class="sentence-box">
+      <span id="sentence-output">Tap words to build a sentence.</span>
+    </div>
+
+    <div class="button-grid" role="group" aria-label="Common words">
+      <button class="comm-button" data-word="I" aria-label="I">
+        <span class="icon">👤</span>
+        <span class="label">I</span>
+      </button>
+      <button class="comm-button" data-word="am" aria-label="am">
+        <span class="icon">🟰</span>
+        <span class="label">am</span>
+      </button>
+      <button class="comm-button" data-word="hungry" aria-label="hungry">
+        <span class="icon">🍽️</span>
+        <span class="label">Hungry</span>
+      </button>
+      <button class="comm-button" data-word="thirsty" aria-label="thirsty">
+        <span class="icon">🥤</span>
+        <span class="label">Thirsty</span>
+      </button>
+      <button class="comm-button" data-word="help" aria-label="help">
+        <span class="icon">🆘</span>
+        <span class="label">Help</span>
+      </button>
+      <button class="comm-button" data-word="hurt" aria-label="hurt">
+        <span class="icon">😣</span>
+        <span class="label">Hurt</span>
+      </button>
+      <button class="comm-button" data-word="need" aria-label="need">
+        <span class="icon">✋</span>
+        <span class="label">Need</span>
+      </button>
+      <button class="comm-button" data-word="more" aria-label="more">
+        <span class="icon">➕</span>
+        <span class="label">More</span>
+      </button>
+      <button class="comm-button" data-word="please" aria-label="please">
+        <span class="icon">🙏</span>
+        <span class="label">Please</span>
+      </button>
+      <button class="comm-button" data-word="thank you" aria-label="thank you">
+        <span class="icon">💛</span>
+        <span class="label">Thank You</span>
+      </button>
+      <button class="comm-button" data-word="yes" aria-label="yes">
+        <span class="icon">👍</span>
+        <span class="label">Yes</span>
+      </button>
+      <button class="comm-button" data-word="no" aria-label="no">
+        <span class="icon">👎</span>
+        <span class="label">No</span>
+      </button>
+    </div>
+
+    <div class="sentence-actions">
+      <button class="secondary-button" id="speak-sentence">Speak Sentence</button>
+      <button class="secondary-button" id="clear-sentence">Clear</button>
+    </div>
+
+    <div class="feedback" aria-live="polite" id="feedback">Ready to communicate.</div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
