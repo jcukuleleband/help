@@ -49,7 +49,11 @@ const sayWord = (word) => {
     return;
   }
 
-  const utterance = new SpeechSynthesisUtterance(word);
+  // Some voices pronounce single letters as "capital I"; insert
+  // a zero-width space to ensure the engine treats it as a word.
+  const textToSpeak = word === 'I' ? '\u200BI' : word;
+
+  const utterance = new SpeechSynthesisUtterance(textToSpeak);
   utterance.lang = 'en-US';
   utterance.rate = 0.9;
   utterance.pitch = 1.0;
