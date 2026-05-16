@@ -1,4 +1,5 @@
-const buttons = document.querySelectorAll('.comm-button');
+const commButtons = document.querySelectorAll('.comm-button');
+const wordButtons = document.querySelectorAll('.word-button');
 const feedback = document.getElementById('feedback');
 const sentenceOutput = document.getElementById('sentence-output');
 const speakSentenceButton = document.getElementById('speak-sentence');
@@ -39,7 +40,7 @@ if ('speechSynthesis' in window) {
 
 const updateSentenceOutput = () => {
   if (!sentenceOutput) return;
-  sentenceOutput.textContent = sentence.length ? sentence.join(' ') : 'Tap words to build a sentence.';
+  sentenceOutput.textContent = sentence.length ? sentence.join(' ') : 'Select subject and action.';
 };
 
 const sayWord = (word) => {
@@ -79,15 +80,20 @@ const clearSentence = () => {
   feedback.textContent = 'Sentence cleared.';
 };
 
-buttons.forEach((button) => {
+commButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const word = button.dataset.word;
+    sayWord(word);
+  });
+});
+
+wordButtons.forEach((button) => {
   button.addEventListener('click', () => {
     const word = button.dataset.word;
     if (!word) return;
 
-    if (sentenceOutput) {
-      sentence.push(word);
-      updateSentenceOutput();
-    }
+    sentence.push(word);
+    updateSentenceOutput();
     sayWord(word);
   });
 });
@@ -107,7 +113,7 @@ if (clearSentenceButton) {
 window.addEventListener('keydown', (event) => {
   if (event.key === 'Enter' || event.key === ' ') {
     const active = document.activeElement;
-    if (active?.classList.contains('comm-button')) {
+    if (active?.classList.contains('comm-button') || active?.classList.contains('word-button')) {
       event.preventDefault();
       active.click();
     }

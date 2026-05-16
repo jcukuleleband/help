@@ -4,75 +4,157 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <meta name="description" content="Sentence builder page for the communication helper app." />
-  <title>Sentence Builder</title>
+  <title>Phrase Builder</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <main class="app-shell">
     <div class="page-header">
-      <a class="nav-link" href="index.html">← Home</a>
-      <h1>Sentence Builder</h1>
+      <a class="nav-link" href="index.html">← Commands</a>
+      <h1>Phrases</h1>
+      <a class="nav-link" href="movie-phrases.html">Movies →</a>
     </div>
 
-    <p class="instructions">Tap common words to build a sentence, then speak it aloud.</p>
+    <p class="instructions">Tap a subject on the left, then a predicate on the right to build a sentence.</p>
 
     <div class="sentence-box">
-      <span id="sentence-output">Tap words to build a sentence.</span>
+      <span id="sentence-output">Select subject and action.</span>
     </div>
 
-    <div class="button-grid" role="group" aria-label="Common words">
-      <button class="comm-button" data-word="I" aria-label="I">
-        <span class="icon">👤</span>
-        <span class="label">I</span>
-      </button>
-      <button class="comm-button" data-word="am" aria-label="am">
-        <span class="icon">🟰</span>
-        <span class="label">am</span>
-      </button>
-      <button class="comm-button" data-word="hungry" aria-label="hungry">
-        <span class="icon">🍽️</span>
-        <span class="label">Hungry</span>
-      </button>
-      <button class="comm-button" data-word="thirsty" aria-label="thirsty">
-        <span class="icon">🥤</span>
-        <span class="label">Thirsty</span>
-      </button>
-      <button class="comm-button" data-word="help" aria-label="help">
-        <span class="icon">🆘</span>
-        <span class="label">Help</span>
-      </button>
-      <button class="comm-button" data-word="hurt" aria-label="hurt">
-        <span class="icon">😣</span>
-        <span class="label">Hurt</span>
-      </button>
-      <button class="comm-button" data-word="need" aria-label="need">
-        <span class="icon">✋</span>
-        <span class="label">Need</span>
-      </button>
-      <button class="comm-button" data-word="more" aria-label="more">
-        <span class="icon">➕</span>
-        <span class="label">More</span>
-      </button>
-      <button class="comm-button" data-word="please" aria-label="please">
-        <span class="icon">🙏</span>
-        <span class="label">Please</span>
-      </button>
-      <button class="comm-button" data-word="thank you" aria-label="thank you">
-        <span class="icon">💛</span>
-        <span class="label">Thank You</span>
-      </button>
-      <button class="comm-button" data-word="yes" aria-label="yes">
-        <span class="icon">👍</span>
-        <span class="label">Yes</span>
-      </button>
-      <button class="comm-button" data-word="no" aria-label="no">
-        <span class="icon">👎</span>
-        <span class="label">No</span>
-      </button>
+    <div class="sentence-builder">
+      <div class="column">
+        <h3>I/You</h3>
+        <div class="word-group" role="group" aria-label="Subjects">
+          <button class="word-button" data-word="I" aria-label="I">
+            <span class="icon">👤</span>
+            <span class="text">I</span>
+          </button>
+          <button class="word-button" data-word="You" aria-label="You">
+            <span class="icon">👥</span>
+            <span class="text">You</span>
+          </button>
+          <button class="word-button" data-word="My" aria-label="My">
+            <span class="icon">✋</span>
+            <span class="text">My</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="column">
+        <h3>Action</h3>
+        <div class="word-group" role="group" aria-label="Actions and needs">
+          <button class="word-button" data-word="need" aria-label="need">
+            <span class="icon">🆘</span>
+            <span class="text">Need</span>
+          </button>
+          <button class="word-button" data-word="hurt" aria-label="hurt">
+            <span class="icon">😣</span>
+            <span class="text">Hurt</span>
+          </button>
+          <button class="word-button" data-word="cold" aria-label="cold">
+            <span class="icon">🥶</span>
+            <span class="text">Cold</span>
+          </button>
+          <button class="word-button" data-word="hot" aria-label="hot">
+            <span class="icon">🔥</span>
+            <span class="text">Hot</span>
+          </button>
+          <button class="word-button" data-word="uncomfortable" aria-label="uncomfortable">
+            <span class="icon">😣</span>
+            <span class="text">Uncomfortable</span>
+          </button>
+          <button class="word-button" data-word="thirsty" aria-label="thirsty">
+            <span class="icon">🥤</span>
+            <span class="text">Thirsty</span>
+          </button>
+          <button class="word-button" data-word="hungry" aria-label="hungry">
+            <span class="icon">🍽️</span>
+            <span class="text">Hungry</span>
+          </button>
+          <button class="word-button" data-word="tired" aria-label="tired">
+            <span class="icon">😴</span>
+            <span class="text">Tired</span>
+          </button>
+          <button class="word-button" data-word="nauseous" aria-label="nauseous">
+            <span class="icon">🤢</span>
+            <span class="text">Nauseous</span>
+          </button>
+          <button class="word-button" data-word="can't breathe" aria-label="can't breathe">
+            <span class="icon">🫁</span>
+            <span class="text">Can't Breathe</span>
+          </button>
+          <button class="word-button" data-word="dizzy" aria-label="dizzy">
+            <span class="icon">😵</span>
+            <span class="text">Dizzy</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="column">
+        <h3>Object</h3>
+        <div class="word-group" role="group" aria-label="Objects">
+          <button class="word-button" data-word="water" aria-label="water">
+            <span class="icon">💧</span>
+            <span class="text">Water</span>
+          </button>
+          <button class="word-button" data-word="food" aria-label="food">
+            <span class="icon">🍎</span>
+            <span class="text">Food</span>
+          </button>
+          <button class="word-button" data-word="medicine" aria-label="medicine">
+            <span class="icon">💊</span>
+            <span class="text">Medicine</span>
+          </button>
+          <button class="word-button" data-word="blanket" aria-label="blanket">
+            <span class="icon">🛏️</span>
+            <span class="text">Blanket</span>
+          </button>
+          <button class="word-button" data-word="bedpan" aria-label="bedpan">
+            <span class="icon">🚽</span>
+            <span class="text">Bedpan</span>
+          </button>
+          <button class="word-button" data-word="I V" aria-label="I V">
+            <span class="icon">🩺</span>
+            <span class="text">IV</span>
+          </button>
+          <button class="word-button" data-word="tube" aria-label="tube">
+            <span class="icon">🧪</span>
+            <span class="text">Tube</span>
+          </button>
+          <button class="word-button" data-word="help" aria-label="help">
+            <span class="icon">🆘</span>
+            <span class="text">Help</span>
+          </button>
+          <button class="word-button" data-word="my head" aria-label="my head">
+            <span class="icon">🧠</span>
+            <span class="text">Head</span>
+          </button>
+          <button class="word-button" data-word="my arm" aria-label="my arm">
+            <span class="icon">💪</span>
+            <span class="text">Arm</span>
+          </button>
+          <button class="word-button" data-word="my leg" aria-label="my leg">
+            <span class="icon">🦵</span>
+            <span class="text">Leg</span>
+          </button>
+          <button class="word-button" data-word="my stomach" aria-label="my stomach">
+            <span class="icon">🤰</span>
+            <span class="text">Stomach</span>
+          </button>
+          <button class="word-button" data-word="my back" aria-label="my back">
+            <span class="icon">🦴</span>
+            <span class="text">Back</span>
+          </button>
+          <button class="word-button" data-word="my throat" aria-label="my throat">
+            <span class="icon">👄</span>
+            <span class="text">Throat</span>
+          </button>
+        </div>
+      </div>
     </div>
 
     <div class="sentence-actions">
-      <button class="secondary-button" id="speak-sentence">Speak Sentence</button>
+      <button class="secondary-button" id="speak-sentence">Speak</button>
       <button class="secondary-button" id="clear-sentence">Clear</button>
     </div>
 

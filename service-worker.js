@@ -3,6 +3,7 @@ const PRECACHE_URLS = [
   './',
   './index.html',
   './sentences.html',
+  './movie-phrases.html',
   './styles.css',
   './script.js',
   './manifest.json',

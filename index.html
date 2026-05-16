@@ -9,7 +9,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="apple-mobile-web-app-title" content="Comm Helper" />
   <meta name="format-detection" content="telephone=no" />
-  <title>Communication Helper</title>
+  <title>Commands</title>
   <link rel="manifest" href="manifest.json" />
   <link rel="apple-touch-icon" sizes="180x180" href="icons/icon-180.png" />
   <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png" />
@@ -18,11 +18,12 @@
 </head>
 <body>
   <main class="app-shell">
-    <h1>Communication Helper</h1>
-    <p class="instructions">Tap an icon to say the word aloud. Designed for easy finger use.</p>
-    <div class="page-actions">
-      <a class="secondary-link" href="sentences.html">Sentence Builder</a>
+    <div class="page-header">
+      <div class="nav-spacer"></div>
+      <h1>Commands</h1>
+      <a class="nav-link" href="sentences.html">Phrases →</a>
     </div>
+    <p class="instructions">Tap an icon to say the word aloud. Designed for easy finger use.</p>
 
     <div class="button-grid" role="group" aria-label="Communication actions">
       <button class="comm-button" data-word="Yes" aria-label="Yes">
@@ -33,6 +34,26 @@
         <span class="icon">👎</span>
         <span class="label">No</span>
       </button>
+      <button class="comm-button" data-word="Maybe" aria-label="Maybe">
+        <span class="icon">🤔</span>
+        <span class="label">Maybe</span>
+      </button>
+      <button class="comm-button" data-word="A little" aria-label="A little">
+        <span class="icon">🙂</span>
+        <span class="label">A little</span>
+      </button>
+      <button class="comm-button" data-word="Very much" aria-label="Very much">
+        <span class="icon">🌟</span>
+        <span class="label">Very much</span>
+      </button>
+      <button class="comm-button" data-word="Hello" aria-label="Hello">
+        <span class="icon">👋</span>
+        <span class="label">Hello</span>
+      </button>
+      <button class="comm-button" data-word="Goodbye" aria-label="Goodbye">
+        <span class="icon">👋</span>
+        <span class="label">Goodbye</span>
+      </button>
       <button class="comm-button" data-word="I don't understand" aria-label="I don't understand">
         <span class="icon">🤷</span>
         <span class="label">Don't Understand</span>
@@ -41,9 +62,25 @@
         <span class="icon">😣</span>
         <span class="label">Pain</span>
       </button>
+      <button class="comm-button" data-word="Good" aria-label="Good">
+        <span class="icon">😊</span>
+        <span class="label">Good</span>
+      </button>
+      <button class="comm-button" data-word="I could be better" aria-label="I could be better">
+        <span class="icon">😐</span>
+        <span class="label">I could be better</span>
+      </button>
       <button class="comm-button" data-word="Nurse" aria-label="Nurse">
         <span class="icon">👩‍⚕️</span>
         <span class="label">Nurse</span>
+      </button>
+      <button class="comm-button" data-word="Suction Nose" aria-label="Suction Nose">
+        <span class="icon">👃</span>
+        <span class="label">Suction Nose</span>
+      </button>
+      <button class="comm-button" data-word="Suction Throat" aria-label="Suction Throat">
+        <span class="icon">🫁</span>
+        <span class="label">Suction Throat</span>
       </button>
       <button class="comm-button" data-word="Choking" aria-label="Choking">
         <span class="icon">⚠️</span>
@@ -52,6 +89,10 @@
       <button class="comm-button" data-word="I love you" aria-label="I love you">
         <span class="icon">❤️</span>
         <span class="label">I Love You</span>
+      </button>
+      <button class="comm-button" data-word="Thank you" aria-label="Thank you">
+        <span class="icon">🙏</span>
+        <span class="label">Thank You</span>
       </button>
       <button class="comm-button" data-word="Adjust Bed" aria-label="Adjust Bed">
         <span class="icon">🛏️</span>
@@ -65,9 +106,9 @@
         <span class="icon">😟</span>
         <span class="label">Worried</span>
       </button>
-      <button class="comm-button" data-word="Not Sure" aria-label="Not Sure">
-        <span class="icon">❓</span>
-        <span class="label">Not Sure</span>
+      <button class="comm-button" data-word="Please" aria-label="Please">
+        <span class="icon">🙏</span>
+        <span class="label">Please</span>
       </button>
       <button class="comm-button" data-word="Potty" aria-label="Potty">
         <span class="icon">🚽</span>
